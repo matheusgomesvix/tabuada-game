@@ -44,7 +44,10 @@ export default defineConfig((/* ctx */) => {
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
-      publicPath: '/tabuada-game/',
+      publicPath: '',
+      extendViteConf(viteConf) {
+        viteConf.base = '/tabuada-game/'
+      },
       // analyze: true,
       // env: {},
       // rawDefine: {}
