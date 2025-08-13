@@ -1,4 +1,4 @@
-# Tabuada Hero (tabuada-hero)
+# Tabuada Game (tabuada-game)
 
 A Quasar Project
 
