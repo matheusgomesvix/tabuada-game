@@ -33,6 +33,9 @@
 <script setup>
 import { colors } from 'quasar'
 import { computed, nextTick, onMounted, ref } from 'vue'
+import { useGameStore } from 'src/stores/game'
+
+const gameStore = useGameStore()
 
 const inputRef = ref(null)
 
@@ -58,7 +61,7 @@ const randomNumber = (min, max) => {
 const answer = ref(null)
 
 const score = ref(0)
-const record = ref(0)
+const record = ref(gameStore.getRecord)
 
 const n1 = ref(0)
 const n2 = ref(0)
@@ -93,8 +96,7 @@ const onSubmit = () => {
 
   if (score.value > record.value) {
     record.value = score.value
-
-    // TODO: salvar o record na store
+    gameStore.setRecord(score.value)
   }
 
   nextTick(() => {
