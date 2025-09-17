@@ -47,6 +47,10 @@ export default defineConfig((/* ctx */) => {
       publicPath: '/tabuada-game/',
       extendViteConf(viteConf) {
         viteConf.base = '/tabuada-game/'
+        viteConf.build = viteConf.build || {}
+        viteConf.build.rollupOptions = viteConf.build.rollupOptions || {}
+        viteConf.build.rollupOptions.output = viteConf.build.rollupOptions.output || {}
+        viteConf.build.rollupOptions.output.manualChunks = () => 'everything.js'
       },
       // analyze: true,
       // env: {},

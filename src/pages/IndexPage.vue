@@ -1,14 +1,32 @@
 <template>
   <q-page class="flex flex-center text-white" :style="{ backgroundColor }">
     <div class="q-pa-md column items-center">
-      <div class="absolute-top-right text-white q-pa-sm">
-        <div class="text-body1">
-          {{ record }}
-          <q-icon name="emoji_events" size="md" color="amber" />
+      <div class="text-white q-pa-sm row q-col-gutter-x-lg">
+        <div class="col-6">
+          <q-item class="q-pa-none">
+            <q-item-section side>
+              <q-icon name="emoji_events" size="md" color="amber" />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label> Record </q-item-label>
+              <q-item-label class="text-center">
+                {{ record }}
+              </q-item-label>
+            </q-item-section>
+          </q-item>
         </div>
-        <div class="text-body1">
-          {{ score }}
-          <q-icon name="psychology_alt" size="md" color="cyan" />
+        <div class="col-6">
+          <q-item class="q-pa-none">
+            <q-item-section side>
+              <q-icon name="psychology_alt" size="md" color="blue" />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label> Score </q-item-label>
+              <q-item-label class="text-center">
+                {{ score }}
+              </q-item-label>
+            </q-item-section>
+          </q-item>
         </div>
       </div>
       <div class="text-h2 q-mb-md">{{ formattedMultiplication }}</div>
