@@ -46,7 +46,7 @@ export default defineConfig((/* ctx */) => {
 
       publicPath: '/tabuada-game/',
       extendViteConf(viteConf) {
-        viteConf.base = '/tabuada-game/'
+        viteConf.base = './'
       },
       // analyze: true,
       // env: {},
